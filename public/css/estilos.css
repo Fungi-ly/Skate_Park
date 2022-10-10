@@ -1,0 +1,41 @@
+body {
+    background: url(../img/skate2.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #ff1500;
+    text-shadow: 0px 0px 1px rgb(183, 49, 178);
+    font-family: sans-serif;
+    text-align: center;
+    padding: 40px 100px;
+}
+
+h4, h5 {
+    color: white;
+}
+
+a {
+    text-shadow: 0px 0px 1px rgb(224, 44, 74);
+    color: rgb(255, 89, 0)
+}
+
+h1 {
+    font-style: italic;
+}
+
+td,
+th {
+    vertical-align: middle !important;
+}
+
+td div {
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+}
+
+
+input {
+    text-align: center;
+}

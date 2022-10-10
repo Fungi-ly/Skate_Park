@@ -1,0 +1,61 @@
+
+  <body>
+    <h1>Skate Park</h1>
+
+    <div class="py-4">
+      <h2>Registro</h2>
+      <br />
+
+      <form action="/registrar" method="POST" enctype="multipart/form-data">
+        <div class="form-group row w-50 m-auto">
+          <div class="form-group col-12 col-sm-6">
+            <label>Email</label>
+            <input name="email" id='email' class="form-control m-auto" />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Nombre</label>
+            <input name="nombre" id="nombre" class="form-control m-auto" />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Password</label>
+            <input type="password" name="password" id="password" class="form-control m-auto" />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Repita la password</label>
+            <input type="password" name="password2" id="password2" class="form-control m-auto" />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Años de experiencia</label>
+            <input name="experiencia" id='experiencia' class="form-control m-auto" />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Especialidad</label>
+            <input name="especialidad" id='especialidad' class="form-control m-auto" />
+          </div>
+          <div class="form-group col-12 col-sm-12">
+            <label>Foto de perfil</label>
+            <input name="foto" id='foto' type="file" accept=".gif,.jpg,.jpeg,.png" size="5000" onchange="verificatam();"/>
+          </div>
+        </div>
+        <button class="btn btn-info mb-3">Registrarme</button>
+        <p><a href="/Login"> Iniciar sesión</a></p>
+      </form>
+    </div>
+  </body>
+</html>
+
+
+  <script type="text/javascript">
+
+    function verificatam(){
+      const arch = document.getElementById("foto");
+      var sizeByte = parseInt(arch.files[0].size);
+      var siezekiloByte = parseInt(sizeByte / 1024);
+      var tamax=parseInt(arch.getAttribute("size"));
+      if (siezekiloByte > tamax) {
+        alert('El peso del archivo que intentas subir supera el límite permitido!!');
+        arch.value='';
+      }
+    }
+
+  </script>
